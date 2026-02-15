@@ -7,3 +7,4 @@ async function generateNotification() {
 }
 
 generateNotification();
+setInterval(generateNotification, 3000);
