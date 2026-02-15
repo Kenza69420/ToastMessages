@@ -12,6 +12,10 @@ export function showToast(advice, fromCache) {
         toast.className = 'toast fresh';
     }
 
+    let label = document.createElement('span');
+    label.className = 'toast-label';
+    label.textContent = fromCache ? 'Z archivu' : 'Cerstve';
+
     let text = document.createElement('p');
     text.textContent = advice;
 
@@ -22,6 +26,7 @@ export function showToast(advice, fromCache) {
         toast.remove();
     };
 
+    toast.appendChild(label);
     toast.appendChild(text);
     toast.appendChild(closeBtn);
     container.appendChild(toast);
