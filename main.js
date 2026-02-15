@@ -18,4 +18,4 @@ async function generateNotification() {
 }
 
 generateNotification();
-setInterval(generateNotification, 3000);
+setInterval(generateNotification, 6000);
